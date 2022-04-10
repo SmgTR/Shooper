@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start:dev",
+      "path": "backend/",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Start Server",
+      "detail": "Start Server",
+      "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "path": "client/",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Start Client",
+      "detail": "Start Client"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "path": "client/",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Start Test",
+      "detail": "Start Test"
+    },
+    {
+      "label": "StartDev",
+      "group": "build",
+
+      "dependsOn": ["Start Server", "Start Client", "Start Test"]
+    }
+  ]
+}
