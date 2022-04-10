@@ -1,5 +1,13 @@
 # Shooper
 
+### Project in progress
+
+ToDo:
+Backend- delivery and order process.
+Frontend- Manage products, manage orders and delivery.
+
+### Setup environment
+
 Use below command to install all dependencies:
 
 ```$ yarn run install:all```
