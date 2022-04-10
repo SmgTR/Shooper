@@ -6,6 +6,8 @@ ToDo:
 Backend- delivery and order process.
 Frontend- Manage products, manage orders and delivery.
 
+Live app: ```https://bxzne.herokuapp.com``` 
+
 ### Setup environment
 
 Use below command to install all dependencies:
