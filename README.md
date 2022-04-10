@@ -3,7 +3,7 @@
 ### Project in progress
 
 ToDo:
-Backend- delivery and order process.
+Backend- delivery and order process, mail templates.
 Frontend- Manage products, manage orders and delivery.
 
 Live app: ```https://bxzne.herokuapp.com``` 
