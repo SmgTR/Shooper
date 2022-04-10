@@ -1,0 +1,24 @@
+.product__content {
+  flex-direction: column;
+  display: flex;
+
+  @include respond(tablet) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.product__container {
+  padding: 20px;
+}
+
+.product__navigation {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin-bottom: 1.6rem;
+
+  & button:not(i ~ button) {
+    margin-left: auto;
+  }
+}

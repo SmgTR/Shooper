@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.mainContainer {
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $color-primary--dark;
+}

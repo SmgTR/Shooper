@@ -1,0 +1,36 @@
+.input__container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+
+  label {
+    font-size: 1.3rem;
+    top: -20px;
+    position: absolute;
+    transition: top 0.2s;
+  }
+}
+.label {
+  position: absolute;
+  top: 0 !important;
+  left: 0;
+}
+
+.input__main {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-dark;
+  padding: 5px 0;
+  outline: none;
+  z-index: 1;
+
+  &:focus,
+  &:active {
+    & ~ label {
+      top: -20px !important;
+      color: $color-highlight;
+    }
+  }
+}

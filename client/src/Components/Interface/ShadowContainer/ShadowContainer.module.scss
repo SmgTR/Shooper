@@ -1,0 +1,38 @@
+.container {
+  color: $color-dark;
+  font-size: 2rem;
+  border-radius: 5px;
+  background-color: $color-primary;
+  box-shadow: 0 4px 4px $color-shadow;
+  // @include flexLayout(rowCenterVertical);
+  overflow: hidden;
+}
+
+.containerSmall {
+  height: 4rem;
+  width: 3.6rem;
+  @include flexLayout(flexCenter);
+}
+.containerMedium {
+  height: 8rem;
+  width: 7.2rem;
+}
+.containerLarge {
+  height: clamp(10rem, 70%, 10rem);
+  width: clamp(18rem, 30vw, 18rem);
+  min-width: fit-content;
+}
+.containerHigh {
+  height: clamp(20.8rem, 70%, 20.8rem);
+  width: clamp(18.8rem, 30vw, 18.8rem);
+  min-width: fit-content;
+}
+.containerBig {
+  min-width: min-content;
+  width: 100%;
+  @include respond(tablet) {
+    height: clamp(31rem, 70%, 31rem);
+    width: clamp(45.2rem, 50vw, 45.2rem);
+    min-width: max-content;
+  }
+}

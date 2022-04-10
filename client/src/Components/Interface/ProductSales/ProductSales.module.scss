@@ -1,0 +1,27 @@
+
+.ProductsContainer{
+	height: 25vh;
+	width: 50vw;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	margin-top: 1.2rem;
+	.ProductsSale{
+		display:flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		height:100%;
+		width:100%;
+		
+	}
+	.Orders{
+		display:flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		height:70%;
+		width:100%;
+	}
+}

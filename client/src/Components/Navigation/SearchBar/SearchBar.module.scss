@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.label {
+  width: 0;
+  height: 0;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 1rem 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-primary--dark;
+  color: $color-dark;
+  transition: box-shadow 0.8s;
+
+  &::placeholder {
+    color: $color-accent--text;
+    font-family: $font-text;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    font-family: $font-text;
+  }
+  &:focus,
+  &:focus-within,
+  &:active {
+    box-shadow: 0 8px 15px $color-shadow;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &:-webkit-autofill::first-line {
+    font-family: $font-text;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    font-family: $font-text;
+    -webkit-box-shadow: 0 0 0 30px inset $color-primary--dark;
+    box-shadow: 0 0 0 30px inset $color-primary--dark;
+  }
+
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: $color-accent--text;
+}

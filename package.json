@@ -1,0 +1,53 @@
+{
+  "name": "shopper",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Smg & Bartosz Kmietowicz",
+  "license": "UNLICENSED",
+  "scripts": {
+    "install:all": "(yarn install); (cd client && yarn install);  (cd backend && yarn install)",
+    "server": "cd backend && yarn run start:dev",
+    "client": "cd client && yarn run start",
+    "test": "cd client && yarn husky:test",
+    "start:all": "concurrently \"yarn run server\" \"yarn run client\"",
+    "pre-commit": "husky install",
+    "build:all": "(cd backend && yarn run build); (cd client && yarn run build)",
+    "start": "cd backend && yarn run start:prod",
+    "build": "cd backend && yarn build",
+    "build:netlify": "cd client && yarn && yarn build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn build && cd .. && cd backend && yarn install"
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-module-resolver": "^1.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-react": "7.26.1",
+    "husky": "^7.0.4",
+    "lint-staged": ">=10",
+    "typescript": "^4.4.4"
+  },
+  "lint-staged": {
+    "**/*.tsx": [
+      "eslint --cache --fix"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "react-router-dom": "6",
+    "concurrently": "^6.3.0"
+  },
+  "engines": {
+    "node": "^16.9.1"
+  }
+}

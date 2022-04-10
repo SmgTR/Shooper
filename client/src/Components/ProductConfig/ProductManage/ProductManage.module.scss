@@ -1,0 +1,111 @@
+.product__manage_container {
+  margin-top: 2rem;
+
+  @include respond(tablet) {
+    min-width: 447px;
+  }
+
+  @include respond(tablet) {
+    width: 40%;
+    margin-top: 0;
+  }
+
+  h4 {
+    font-weight: normal;
+  }
+}
+
+.product__manage {
+  padding: 20px;
+  font-size: 1.6rem;
+
+  &_category {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+
+    & h4 {
+      margin-bottom: 20px;
+    }
+
+    & span {
+      margin-left: 8px;
+      font-weight: bold;
+    }
+  }
+
+  &_brand {
+    margin-top: 20px;
+
+    h4 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+
+  &_ref {
+    padding: 10px 0;
+
+    h4 {
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+  }
+
+  &_tax {
+    margin: 20px 0;
+
+    input {
+      margin-top: 20px;
+      background-color: transparent;
+      width: 40px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $color-dark;
+      padding-left: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &_quantity {
+    input {
+      margin-top: 20px;
+      background-color: transparent;
+      width: 40px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $color-dark;
+      padding-left: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+  &_prices {
+    margin-top: 20px;
+    input {
+      margin-top: 5px;
+      background-color: transparent;
+      width: 40px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $color-dark;
+      padding-left: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+
+    & label {
+      margin: 8px 0;
+      font-size: 1.4rem;
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include respond(tablet) {
+    flex-wrap: nowrap;
+    padding: 25px 15px 25px 15px;
+  }
+}
+
+.topMenu {
+  @include respond(tablet) {
+    display: none;
+  }
+}
+
+.nav {
+  width: 40%;
+  max-width: 150px;
+  justify-content: space-between;
+
+  @include respond(tablet) {
+    order: 2;
+    max-width: 100px;
+  }
+}
+
+.title {
+  display: none;
+  font-size: 2rem;
+  @include respond(tablet) {
+    display: block;
+  }
+
+  @include respond(desktop) {
+    width: 40%;
+  }
+}
+
+.searchBarContainer {
+  width: 100%;
+  margin-top: 2rem;
+
+  @include respond(tablet) {
+    max-width: 34.1rem;
+    width: 40%;
+    margin-top: 0;
+    order: 1;
+  }
+}

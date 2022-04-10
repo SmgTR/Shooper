@@ -1,0 +1,17 @@
+.textarea {
+  resize: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: $font-text;
+  line-height: 1.6;
+
+  &:active,
+  &:focus {
+    outline: 1px solid $color-highlight;
+  }
+}
+
+.label {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["jest", "node"],
+    "typeRoots": ["./ts-declarations", "node_modules/@types"],
+    "sourceMap": true,
+    "strict": true,
+    "declaration": true,
+    "inlineSources": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "skipLibCheck": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "baseUrl": "./src",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src", "craco.config.ts"]
+}

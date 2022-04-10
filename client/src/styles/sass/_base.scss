@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  height: fit-content;
+  font-family: $font-text;
+  color: $color-dark;
+  background-color: $color-primary;
+  overflow-x: hidden;
+}
+
+#mobileNav {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.menuOpen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 50;
+  background-color: $color-dark;
+  transform: translateY(0);
+  animation: slidein 1s;
+  color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.--error,
+.--not_available {
+  color: $color-error;
+}
+
+.--not_available--mobile {
+  @media (max-width: 899px) {
+    // border-bottom: 4px solid $color-error;
+    color: $color-error;
+    // background-color: rgba(255, 0, 0, 0.1) !important;
+  }
+}
+
+.--availability_alert--mobile {
+  @media (max-width: 899px) {
+    // background-color: rgba(255, 247, 32, 0.2) !important;
+    color: $color-alert;
+  }
+}
+
+.--availability_alert {
+  color: $color-alert;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.--main {
+  background-color: $color-highlight;
+  color: $color-primary;
+}
+
+.--secondary {
+  background-color: $color-shadow;
+}
+
+.btn.--outline {
+  padding: 1rem 2rem;
+  border: 1px solid $color-dark;
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    border-color: $color-highlight;
+  }
+}
+
+.fullHeight {
+  height: 100% !important;
+}
+
+.fullWidth {
+  width: 100%;
+}

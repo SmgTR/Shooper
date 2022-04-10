@@ -1,0 +1,129 @@
+.categories {
+  position: absolute;
+  overflow: auto;
+  width: 70vw;
+  min-height: 60vh;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-primary;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+
+  & > button {
+    margin-left: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.4s;
+    border: 1px solid $color-dark;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 757px) {
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      cursor: pointer;
+
+      &:hover {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  &__main {
+    margin: 2rem 0;
+  }
+
+  & > ul > li:not(:last-child) {
+    // width: ;
+  }
+
+  & > ul > li:last-child {
+    margin-top: 40px;
+  }
+
+  ul > li ul {
+    color: $color-dark;
+  }
+
+  &__sub {
+    border: 1px solid $color-dark;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+
+    & li {
+      padding: 1rem 0;
+    }
+  }
+
+  &__last {
+    border: 1px solid $color-dark;
+    border-radius: 5px;
+    padding: 0.8rem 0.8rem;
+    margin: 1rem 0;
+    margin-left: 4rem;
+
+    font-size: 1.4rem;
+  }
+
+  &__add {
+    font-size: 1.3rem;
+    width: 10rem;
+    margin-top: 1rem;
+
+    & span {
+      margin-left: 4px;
+      position: relative;
+      transition: margin 0.2s;
+
+      &:after {
+        content: '';
+        background-color: $color-shadow;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        z-index: -1;
+      }
+    }
+
+    &:hover {
+      color: $color-highlight;
+
+      & span {
+        margin-left: 8px;
+      }
+
+      & span:after {
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__container {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

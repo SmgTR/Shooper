@@ -1,0 +1,20 @@
+node_modules/
+
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+
+*.orig.*
+web-build/
+.expo
+.expo-shared
+# macOS
+.DS_Store
+.jest/
+.log
+.vscode/settings.json
+.vscode/launch.json
+.eslintcache
+yarn-error.log

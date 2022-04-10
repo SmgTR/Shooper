@@ -1,0 +1,59 @@
+.back {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem 1.5rem 2rem 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover .back__button {
+    color: $color-primary;
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-color: $color-highlight;
+    border-radius: 16px;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+
+  i {
+    width: 32px;
+    height: 32px;
+    color: $color-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: $color-primary;
+  }
+  &__button {
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    margin-left: 8px;
+    background-color: transparent;
+    transition: color 0s 0.1s;
+  }
+}
