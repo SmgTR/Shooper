@@ -2,12 +2,11 @@
 
 ### Project in progress
 
-ToDo:
 
-Backend- delivery and order process, mail templates.
-Frontend- Manage products, manage orders and delivery.
 
 Live app: ```https://bxzne.herokuapp.com``` 
+
+API documentation: ```https://documenter.getpostman.com/view/13121558/Uyr8kxKX```
 
 ### Setup environment
 
@@ -15,7 +14,7 @@ Use below command to install all dependencies:
 
 ```$ yarn run install:all```
 
-### Start develop
+### Start development
 
 If you are using VSC build in terminal, you can start with ```Shift + cmd + B``` and choose Start Dev.
 
