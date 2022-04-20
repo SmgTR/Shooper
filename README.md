@@ -24,7 +24,7 @@ Otherwise use ```$ yarn start:all```
 
 ### Commits
 
-Husky will abort every commit with test falling and/or eslint errors.
+Husky will abort every commit with failed test and/or eslint errors.
 
 ---
 
