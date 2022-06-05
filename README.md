@@ -6,6 +6,10 @@
 
 Live app: ```https://bxzne.herokuapp.com``` 
 
+Test account <br>```      username: "TestAccount"```<br>
+      ```email: "test@test.com"```<br>
+      ```password: "Test1234" ```
+
 API documentation: ```https://documenter.getpostman.com/view/13121558/Uyr8kxKX```
 
 ### Setup environment
