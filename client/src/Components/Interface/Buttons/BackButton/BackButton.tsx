@@ -1,6 +1,5 @@
 import { FC } from 'react';
 
-import { Link, useNavigate } from 'react-router-dom';
 import styles from './BackButton.module.scss';
 
 const BackButton: FC<{ link: string; text?: string }> = ({ link, text }) => {

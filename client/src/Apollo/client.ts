@@ -1,7 +1,17 @@
-import { ApolloClient, DocumentNode, InMemoryCache } from '@apollo/client';
+import {
+  ApolloClient,
+  createHttpLink,
+  DocumentNode,
+  InMemoryCache
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 type Query = <QV, RT>(name: string, query: DocumentNode, variables?: QV) => Promise<RT>;
-type Mutate = <MV, RT>(name: string, mutation: DocumentNode, variables?: MV) => Promise<RT>;
+type Mutate = <MV, RT>(
+  name: string,
+  mutation: DocumentNode,
+  variables?: MV
+) => Promise<RT>;
 
 export type GraphQLClient = {
   query: Query;
@@ -14,13 +24,28 @@ export const createGQLClient = (): GraphQLClient => {
     resultCaching: false
   });
 
-  const client = new ApolloClient({
-    // Provide required constructor fields
-    cache,
+  const httpLink = createHttpLink({
     uri:
       process.env.NODE_ENV === 'production'
         ? `${process.env.REACT_APP_BACKEND_URL}/graphql`
-        : `${process.env.REACT_APP_BACKEND_LOCAL_URL}/graphql`,
+        : `${process.env.REACT_APP_BACKEND_LOCAL_URL}/graphql`
+  });
+
+  const authLink = setContext((_, { headers }) => {
+    const token = localStorage.getItem('auth');
+
+    return {
+      headers: {
+        ...headers,
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    };
+  });
+
+  const client = new ApolloClient({
+    // Provide required constructor fields
+    cache,
+    link: authLink.concat(httpLink),
 
     defaultOptions: {
       watchQuery: {

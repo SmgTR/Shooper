@@ -12,7 +12,15 @@ interface Textarea {
 
 import styles from './Textarea.module.scss';
 
-const Textarea: FC<Textarea> = ({ title, name, rows, cols, defaultValue, handler, label }) => {
+const Textarea: FC<Textarea> = ({
+  title,
+  name,
+  rows,
+  cols,
+  defaultValue,
+  handler,
+  label
+}) => {
   return (
     <Fragment>
       <label htmlFor={name} className={styles.label}>

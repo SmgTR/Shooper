@@ -1,7 +1,5 @@
 import { FC } from 'react';
 
-import styles from './Buttons.module.scss';
-
 import { ButtonProps } from 'Components';
 
 const Button: FC<ButtonProps> = ({ event, text, btnType, title, btnClass }) => {

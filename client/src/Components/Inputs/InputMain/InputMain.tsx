@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FC, Fragment } from 'react';
+import { ChangeEventHandler, FC } from 'react';
 
 interface Input {
   title: string;

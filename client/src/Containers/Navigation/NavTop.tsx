@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Logo, ShadowContainer, HamburgerMenu, NavAvatar, SearchBar } from 'Components';
 
-import { useLocation } from 'react-router';
-
 import styles from './NavTop.module.scss';
 import { useAppSelector } from 'redux/hooks';
 
 const NavContainer: React.FC = () => {
-  const [pageTitle, setPageTitle] = useState('Dashboard');
-
   const { title } = useAppSelector((state) => state.pageNav);
-
-  useEffect(() => {
-    setPageTitle(title);
-  }, [location]);
 
   const { container, nav, searchBarContainer, topMenu } = styles;
   return (
