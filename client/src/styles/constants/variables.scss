@@ -9,6 +9,7 @@
   --text-light: #989898;
   --color-error: #d43232;
   --color-alert: #c9af5e;
+  --color-placeholder: #a3a3a3;
 }
 
 $color-primary: var(--color-primary);
@@ -22,6 +23,7 @@ $color-shadow: var(--color-shadow);
 $color-text-light: var(--text-light);
 $color-error: var(--color-error);
 $color-alert: var(--color-alert);
+$color-placeholder: var(--color-placeholder);
 
 $font-headings: 'Anton', sans-serif;
 $font-text: 'Roboto', sans-serif;
