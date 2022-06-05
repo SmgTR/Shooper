@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/indent */
 import { gql } from '@apollo/client';
-import { AnyAction } from '@reduxjs/toolkit';
 
 import { setAllProducts, uploadPhoto } from 'redux/slices/products-slice';
 

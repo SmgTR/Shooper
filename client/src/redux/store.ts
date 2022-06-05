@@ -4,6 +4,8 @@ import thunk from 'redux-thunk';
 
 import productsReducer from './slices/products-slice';
 import pageNavReducer from './slices/pagenav-slice';
+import authReducer from './slices/auth-slice';
+
 
 import categoriesReducer from './slices/categories-slice';
 
@@ -14,7 +16,8 @@ import { createGQLClient } from 'Apollo/client';
 const rootReducer = combineReducers({
   products: productsReducer,
   pageNav: pageNavReducer,
-  categories: categoriesReducer
+  categories: categoriesReducer,
+  auth: authReducer
 });
 
 export type StoreState = {
